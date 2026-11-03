@@ -35,8 +35,8 @@ the previous `availableModels` and restores it on disconnect.
 ## Install
 
 ```
-magpie plugin add github:catnuko/magpie-agent-claude-models
-magpie claude-host-models provider magpie        # connect it
+magpie plugin add npm:magpie-agent-claude-models   # or github:catnuko/magpie-agent-claude-models
+magpie claude-host-models provider magpie          # connect it
 ```
 
 Then reopen OpenMausBot (it reads `~/.claude/settings.json` at start-up).
@@ -58,7 +58,7 @@ magpie claude-host-models default                # puts the key back
   user-level `availableModels` is not enforced as a lock by Claude Code (a model
   outside the list still runs), so it is a list host readers can use.
 - Stop-gap only: once magpie itself publishes a host-readable list, uninstall
-  this (`magpie plugin rm github:catnuko/magpie-agent-claude-models`).
+  this (`magpie plugin rm magpie-agent-claude-models@latest`).
 
 ## 中文
 
@@ -66,6 +66,11 @@ magpie claude-host-models default                # puts the key back
 `availableModels`，这样把 Claude Code 当引擎、自己建模型下拉的宿主程序
 （如 OpenMausBot）也能列出 magpie 的模型。只改 `availableModels` 这一个键，
 断开即还原。装完重开宿主程序生效。
+
+```
+magpie plugin add npm:magpie-agent-claude-models
+magpie claude-host-models provider magpie
+```
 
 ## License
 

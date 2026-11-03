@@ -1,6 +1,6 @@
 {
   "name": "magpie-agent-claude-models",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Republish magpie's Claude Code model list as availableModels, so a host app embedding Claude Code (OpenMausBot) can list the same models",
   "type": "module",
   "files": ["claude-models.agent.js", "README.md"],
